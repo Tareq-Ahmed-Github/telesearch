@@ -1,9 +1,9 @@
 // get api
 const searchPhone = () => {
-    const showPhone = document.getElementById("show-phone")
-    showPhone.innerHTML = ""
-    const searchField = document.getElementById("search-field")
-    const searchFieldValue = searchField.value
+    const showPhone = document.getElementById("show-phone");
+    showPhone.innerHTML = "";
+    const searchField = document.getElementById("search-field");
+    const searchFieldValue = searchField.value;
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchFieldValue}`
     fetch(url)
         .then(res => res.json())
@@ -17,17 +17,17 @@ const searchPhone = () => {
         }
 
         )
-    searchField.value = ""
-    const PhoneDetail = document.getElementById("phone-detail")
-    PhoneDetail.innerHTML = ""
+    searchField.value = "";
+    const PhoneDetail = document.getElementById("phone-detail");
+    PhoneDetail.innerHTML = "";
 }
 // set api on ui
 const displayPhone = phones => {
-    const showPhone = document.getElementById("show-phone")
-    showPhone.innerHTML = ""
+    const showPhone = document.getElementById("show-phone");
+    showPhone.innerHTML = "";
     phones.forEach(phone => {
-        const div = document.createElement("div")
-        div.classList.add("col-md-4")
+        const div = document.createElement("div");
+        div.classList.add("col-md-4");
         div.innerHTML = `
         <div class="card phone-card h-100" >
                     <img src="${phone.image}" class="card-img-top" alt="...">
@@ -38,7 +38,7 @@ const displayPhone = phones => {
                     </div>
                   </div>
         `
-        showPhone.appendChild(div)
+        showPhone.appendChild(div);
     });
 }
 // phone details 
