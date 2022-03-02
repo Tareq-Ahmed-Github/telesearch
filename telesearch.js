@@ -56,7 +56,7 @@ const showPhoneDetail = brand => {
     PhoneDetail.innerHTML = ""
     const div = document.createElement("div")
     div.innerHTML = `
-        <div class="card phone-card rounded bg-red-300	" >
+        <div class="card phone-card rounded" >
                 <img src="${brand.image}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-title">Brand: <span>${brand.brand}</span</h4>
