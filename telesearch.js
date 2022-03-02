@@ -29,7 +29,7 @@ const displayPhone = phones => {
         const div = document.createElement("div")
         div.classList.add("col-md-4")
         div.innerHTML = `
-        <div class="card phone-card bg-red-300 h-100" >
+        <div class="card phone-card h-100" >
                     <img src="${phone.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title"><span>Brand:</span> ${phone.brand}</h5>
