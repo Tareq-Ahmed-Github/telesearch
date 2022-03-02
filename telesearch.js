@@ -9,10 +9,10 @@ const searchPhone = () => {
         .then(res => res.json())
         .then(data => {
             if (data.status == false) {
-                document.getElementById("error-massage").style.display = "block"
+                document.getElementById("error-massage").style.display = "block";
             } else {
                 displayPhone(data.data.slice(0, 20))
-                document.getElementById("error-massage").style.display = "none"
+                document.getElementById("error-massage").style.display = "none";
             }
         }
 
@@ -51,10 +51,10 @@ const displayPhoneDetail = details => {
         .then(data => showPhoneDetail(data.data))
 }
 const showPhoneDetail = brand => {
-    console.log(brand)
-    const PhoneDetail = document.getElementById("phone-detail")
-    PhoneDetail.innerHTML = ""
-    const div = document.createElement("div")
+    console.log(brand);
+    const PhoneDetail = document.getElementById("phone-detail");
+    PhoneDetail.innerHTML = "";
+    const div = document.createElement("div");
     div.innerHTML = `
         <div class="card phone-card rounded" >
                 <img src="${brand.image}" class="card-img-top" alt="...">
@@ -78,5 +78,5 @@ const showPhoneDetail = brand => {
                 </div>
         </div>
     `
-    PhoneDetail.appendChild(div)
+    PhoneDetail.appendChild(div);
 }
